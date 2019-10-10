@@ -38,9 +38,9 @@ public class Ejercicio21 {
 			System.out.println("Cual ha sido el resultado de la recuperacion?: apto/no apto");
 			rec = s.next();
 			
-			if(rec == "apto") {
+			if(rec.equals("apto")) {
 				System.out.println("Tu nota media es un 5.");
-			} else if(rec == "no apto") {
+			} else if(rec.equals("no apto")) {
 				System.out.println("Estas suspenso. Tu nota media es "+nm);
 			}
 		}
