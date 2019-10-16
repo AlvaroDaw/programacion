@@ -38,7 +38,7 @@ public class SurpriseN1 {
 		System.out.println("Introduzca la cantidad de veces que quiere dibujar el reloj: ");
 		int cantidad = s.nextInt();
 		
-		int asteriscos = alturaintroducida;
+		int relleno = alturaintroducida;
 		
 		
 			//while para cantidad de relojes que se tienen que dibujar
@@ -52,14 +52,14 @@ public class SurpriseN1 {
 					System.out.print(" ");
 				}
 				//inserta caracter
-				for (int i = 0; i < asteriscos; i++) {
+				for (int i = 0; i < relleno; i++) {
 					System.out.print(caracter);
 				}
 				
 				System.out.println();
 				altura++;
 				espacios++;
-				asteriscos -= 2;
+				relleno -= 2;
 				
 			}	//while parte de arriba
 			
@@ -74,14 +74,14 @@ public class SurpriseN1 {
 				}
 				
 				//pinta caracter
-				for (int i = 0; i < asteriscos; i++) {
+				for (int i = 0; i < relleno; i++) {
 					System.out.print(caracter);
 				}
 				
 				System.out.println();
 				altura ++;
 				espacios --;
-				asteriscos += 2;
+				relleno += 2;
 			}//while parte de abajo
 			
 			//volver valores a original para pintar mas relojes sin que se deformen
@@ -89,7 +89,7 @@ public class SurpriseN1 {
 			cantidad--;
 			altura = 1;
 			alturaintroducida += incremento;
-			asteriscos = alturaintroducida;
+			relleno = alturaintroducida;
 			espacios = 0;
 			}
 		s.close();
