@@ -8,7 +8,7 @@
 import java.util.Scanner;
 public class Ejercicio19 {
 	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
+Scanner s = new Scanner(System.in);
 		
 		int altura;
 		String caracter = "";
@@ -36,7 +36,5 @@ public class Ejercicio19 {
 		}
 		s.close();
 		
-		
-	}
-
+	}			
 }
