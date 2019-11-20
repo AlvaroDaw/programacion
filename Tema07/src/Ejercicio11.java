@@ -19,6 +19,7 @@ public class Ejercicio11 {
 		int n[] = new int[10];
 		int aux[] = new int[10];
 		int primos = 0;
+		boolean esPrimo = true;
 		
 		System.out.println("Introduce 10 numeros enteros separados por INTRO.");
 		
@@ -26,15 +27,22 @@ public class Ejercicio11 {
 			n[i] = s.nextInt();
 		
 		
-		//Comprobar si un numero es primo
-		for(j = 2; j < n[i] -1; j++) {
-			//If para ordenar los primos a la izquierda en el array aux
-			if(n[i] % j != 0) {
-				aux[primos] = n[i];
-				primos++;
+			//Comprobar si un numero es primo
+			esPrimo = true;
+			for(j = 2; j < n[i]; j++) {
+			
+				//If para ordenar los primos a la izquierda en el array aux
+				if(n[i] % j == 0) {
+					esPrimo = false;
 				}
 			}
+		
+			if(esPrimo) {
+				aux[primos] = n[i];
+				primos++;
+			}
 		}
+		
 		//If para ordenar el array
 		
 		//Tabla para array
@@ -55,12 +63,17 @@ public class Ejercicio11 {
 		
 		//Comprobar si un numero es primo
 		for(i = 0; i < 10; i++) {
-			for(j = 2; j < n[i] -1; j++) {
-				//If para ordenar los no primos
+			esPrimo = true;
+			for(j = 2; j < n[i]; j++) {
+				
+				//If para ordenar los primos a la izquierda en el array aux
 				if(n[i] % j == 0) {
-					aux[primos] = n[i];
-					primos++;
+					esPrimo = false;
 				}
+			}
+			if(!esPrimo) {
+				aux[primos] = n[i];
+				primos++;
 			}
 		}
 		//Tabla para array resultante
@@ -77,7 +90,7 @@ public class Ejercicio11 {
 			}
 		System.out.println("│\n└────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘");
 		//Fin de tabla array
-		
+		s.close();
 		}
 		
 	}
