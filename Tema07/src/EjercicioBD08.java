@@ -63,6 +63,7 @@ public class EjercicioBD08 {
 		for(int i = 0; i < 8; i++) {
 			System.out.print((char)((int)'a'+i)+" ");
 		}
+		s.close();
 		
 	}
 
