@@ -31,7 +31,7 @@ public class EjercicioBD09 {
 		for(capa = 0; capa < 6; capa++) {
 			//Rota parte de arriba
 			aux1 = n[capa][11-capa];
-			for(int i = 11; i > 0; i--) {
+			for(int i = 11-capa; i > capa; i--) {
 				n[capa][i] = n[capa][i-1];
 			}
 			
