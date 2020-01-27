@@ -4,7 +4,7 @@
  * @author Alvaro Ramirez
  *
  */
-public class PruebaCoche {
+public class PruebaCoche{
 	public static void main(String[] args) {
 		
 		Coche cocheDeAlvaro = new Coche("Seat","Leon");
@@ -18,7 +18,7 @@ public class PruebaCoche {
 		cocheDeLucia.recorre(120);
 		System.out.println("El coche de Alvaro ha recorrido "+cocheDeAlvaro.getKilometraje()+"Km");
 		System.out.println("El coche de Lucia ha recorrido "+cocheDeLucia.getKilometraje()+"Km");
-		System.out.println("El kilometraje total ha sido de "+Coche.getKilometrajeTotal()+"Km");
+		System.out.println("El kilometraje total ha sido de "+Coche.getKilometrosCoche()+"Km");
 		
 	}
 

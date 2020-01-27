@@ -4,28 +4,43 @@
  * @author Alvaro Ramirez
  *
  */
-public class Coche {
+public class Coche extends Vehiculo{
 	
-	//atributo de clase
-	private static int kilometrajeTotal = 0;
+	private static int kilometrosCoche = 0;
 	
 	//metodo de clase
-	public static int getKilometrajeTotal() {
-		return kilometrajeTotal;
-	}
-	
 	private String marca;
 	private String modelo;
-	private int kilometraje;
 	
 	public Coche(String ma, String mo) {
+		super();
 		marca = ma;
 		modelo = mo;
-		kilometraje = 0;
+		
+	}
+	
+	public Coche() {
+		super();
 	}
 	
 	public int getKilometraje() {
-		return kilometraje;
+		return super.getKilometrosRecorridos();
+	}
+	
+	public int getKilometrajeTotal() {
+		return super.getkilometrosTotales();
+	}
+	
+	public static int getKilometrosCoche() {
+		return kilometrosCoche;
+	}
+	
+	public String getMarca() {
+		return this.marca;
+	}
+	
+	public String getModelo() {
+		return this.modelo;
 	}
 	
 	/**
@@ -33,8 +48,12 @@ public class Coche {
 	 * @param km distancia a recorrer en kilometros
 	 */
 	public void recorre(int km) {
-		kilometraje += km;
-		kilometrajeTotal += km;
+		super.recorre(km);
+		kilometrosCoche += km;
+	}
+	
+	public void quemaRueda() {
+		System.out.println("Estoy quemando rueda.");
 	}
 
 }
