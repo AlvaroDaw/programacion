@@ -2,19 +2,20 @@
 public class Incidencia {
 	
 	static int pendientes = 0;
+	static int contador = 1;
 	
 	private int codigo;
 	private String problema;
 	private String estado;
-	private int numero = 1;
+	private int numero;
 	private String solucion;
 	
 	public Incidencia(int n, String s) {
 		this.codigo = n;
 		this.problema = s;
 		this.estado = "pendiente";
-		this.numero = numero;
-		numero++;
+		this.numero = contador;
+		contador++;
 		pendientes++;
 		
 	}
